@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#200016,#10001f);
+    height: 100vh;  /* الألوان بطول الشاش*/
+    font-family: system-ui;    
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    width: 95%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    list-style: none; 
+    text-decoration: none; 
+}
+
+header ul li {
+    margin-right: 30px;
+}
+
+header ul li a {
+    padding: 6px 5px;
+    border-radius: 20px;
+
+}
+
+header ul li a:hover, .active {
+    background: #fff;
+    color: #200016;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top #200016, transparent);
+}
+
+.main img {
+    position: absolute; /* تتغير حسب الأب*/
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#moon {
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+
+.Salam {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transform: translateY(-300px);
+}
+
+.content {
+    color: #fff;
+    padding: 30px;
+}
+
+.content h1 {
+    display: flex;
+    justify-content: center; 
+}
+content h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+
+content p {
+    margin: 20px;
+}
+
+@media (max-width: 1080px) {
+    header{
+        width: 95%;
+        position: fixed;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 1px 2px;  
+    }
+
+    header .logo {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 60%;
+        font-size: 0.9em;
+        padding: 1px 15px 1px;
+    }
+    
+    header ul li {
+        margin-right: auto;
+    }
+}
